@@ -50,18 +50,11 @@ h1 {
     color: #777777;
 }
 
-.about {
-
-}
-
-.portfolio {
-    
-}
-
 .contact {
     padding: 20px 0px 20px 20px;
 }
 
+/* still not sure why everything pads from the left but NOT the right */
 .main-content {
     overflow: auto;
     background-color: #ffffff;
@@ -70,12 +63,16 @@ h1 {
     border-color: #dddddd;
     width: 920px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
 }
 
 .content-header {
     color: #4aaaa5;
     font-family: 'Georgia', Times, 'Times New Roman', serif;
+    padding: 20px 0px;
+    border-style: none none solid none;
+    border-width: 2px;
+    border-color: #cccccc;
 }
 
 .img-portrait {
@@ -83,15 +80,35 @@ h1 {
     margin: 10px 10px 10px 0px;
 }
 
-.bio-text {
+.main-text {
     font-size: 16px;
     line-height: 32px;
 }
-
+/* wanted to make a sticky footer, but didn't have time */
 footer {
     background-color: #666666;
     text-align: center;
     border-style: solid none none none;
     border-width: 5px;
     border-color: #4aaaa5;
+}
+
+.field {
+    width: 100%;
+}
+
+/* trying to make this an actual multi-line field, not just a fat one-liner lol */
+.field-big {
+    width: 100%;
+    height: 200px;
+}
+
+.submit-button {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 32px;
+    padding: 0px 20px;
+    border: none;
+    margin: 10px 0px;
 }
