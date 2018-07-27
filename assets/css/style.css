@@ -12,10 +12,17 @@ body {
     border-color: #cccccc;
 }
 
+.content-area {
+    width: 960px;
+    margin: 0 auto;
+}
+
 .your-name {
     float: left;
     background-color: #4aaaa5;
     font-family: 'Georgia', Times, 'Times New Roman', serif;
+    color: #ffffff;
+    padding: 20px;
 }
 
 .about {
@@ -35,6 +42,8 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: #dddddd;
+    width: 960px;
+    margin: 0 auto;
 }
 
 .content-header {
