@@ -29,31 +29,63 @@ h1 {
     padding: 20px;
 }
 
-.about {
+.about,
+.portfolio,
+.contact {
+    color: #cccccc;
+    text-decoration: none;
     float: right;
+    padding: 20px;
+}
+
+.separator {
+    float: right;
+    padding: 20px 0px;
+    font-weight: 100;
+    color: #ebebeb;
+}
+
+.current-tab {
+    font-weight: 400;
+    color: #777777;
+}
+
+.about {
+
 }
 
 .portfolio {
-    float: right;
+    
 }
 
 .contact {
-    float: right;
+    padding: 20px 0px 20px 20px;
 }
 
 .main-content {
+    overflow: auto;
     background-color: #ffffff;
     border-style: solid;
     border-width: 1px;
     border-color: #dddddd;
     width: 920px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
 }
 
 .content-header {
     color: #4aaaa5;
     font-family: 'Georgia', Times, 'Times New Roman', serif;
+}
+
+.img-portrait {
+    float: left;
+    margin: 10px 10px 10px 0px;
+}
+
+.bio-text {
+    font-size: 16px;
+    line-height: 32px;
 }
 
 footer {
