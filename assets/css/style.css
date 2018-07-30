@@ -1,114 +1,215 @@
 body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    background-image: url(../images/concrete_seamless.png);
-    color: #777777;
+    font-size: 18px;
+    line-height: 34px;
+    background: url("../images/concrete_seamless.png");
+    color: #777;
 }
 
-.main-header {
-    overflow: auto;
-    background-color: #ffffff;
-    border-style: none none solid none;
-    border-width: 2px;
-    border-color: #cccccc;
+* {
+    box-sizing: border-box;
 }
 
-.content-area {
-    width: 960px;
+.container {
+    width: 100%;
+    max-width: 960px;
     margin: 0 auto;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-bottom: 20px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: 700;
+    color: #4aaaa5;
 }
 
 h1 {
-    font-size: 24px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    line-height: 49px;
+    border-bottom: 3px solid #ddd;    
 }
 
-.your-name {
-    float: left;
-    background-color: #4aaaa5;
-    font-family: 'Georgia', Times, 'Times New Roman', serif;
-    color: #ffffff;
-    padding: 20px;
+h2,
+h3 {
+    font-size: 22px;
 }
 
-.about,
-.portfolio,
-.contact {
-    color: #cccccc;
-    text-decoration: none;
-    float: right;
-    padding: 20px;
-}
-
-.separator {
-    float: right;
-    padding: 20px 0px;
-    font-weight: 100;
-    color: #ebebeb;
-}
-
-.current-tab {
-    font-weight: 400;
-    color: #777777;
-}
-
-.contact {
-    padding: 20px 0px 20px 20px;
-}
-
-/* still not sure why everything pads from the left but NOT the right */
-.main-content {
+.masthead {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    margin: 0 0 30px;
     overflow: auto;
-    background-color: #ffffff;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #dddddd;
-    width: 920px;
-    margin: 20px auto;
-    padding: 0px 20px 20px 20px;
-}
-
-.content-header {
-    color: #4aaaa5;
-    font-family: 'Georgia', Times, 'Times New Roman', serif;
-    padding: 20px 0px;
+    color: #fff;
+    background: #ffffff;
     border-style: none none solid none;
     border-width: 2px;
     border-color: #cccccc;
+}
+
+.logo {
+    float: left;
+    width: 250px;
+    height: 90px;
+    background: #4aaaa5;
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 90px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav {
+    float: right;
+    margin-top: 25px;
+}
+
+nav a {
+    display: inline-block;
+    padding-left: 15px;
+    margin-left: 15px;
+    line-height: 18px;
+    color: #cccccc;
+    text-decoration: none;
+    border-left: 1px solid #efefef;
+}
+
+nav a:first-child {
+    border-left: none;
+}
+
+.current-tab {
+    color: #777777;
+}
+
+h2,
+h3 {
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    border-bottom: 2px solid #eee;
+}
+
+.main-container {
+    padding-top: 130px;
+    min-height: calc(100vh - 70px);
+}
+
+.main-section {
+    float: left;
+    width: 100%;
+    max-width: 960;
+    padding: 30px;
+    margin: 0 0 40px;
+    background: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dddddd;
 }
 
 .img-portrait {
     float: left;
-    margin: 10px 10px 10px 0px;
+    width: 250px;
+    height: auto;
+    margin: 10px 25px 0 0;
 }
 
-.main-text {
-    font-size: 16px;
-    line-height: 32px;
-}
-/* wanted to make a sticky footer, but didn't have time */
 footer {
-    background-color: #666666;
+    padding: 30px 0;
+    clear: both;
+    font-size: 12px;
+    color: #ccc;
+    background: #666;
     text-align: center;
     border-style: solid none none none;
-    border-width: 5px;
+    border-width: 8px;
     border-color: #4aaaa5;
+    height: 50px;
 }
 
-.field {
-    width: 100%;
+.work {
+    position: relative;
+    float: left;
+    width: 274px;
+    margin: 20px 0 25px;
+    overflow: auto;
 }
 
-/* trying to make this an actual multi-line field, not just a fat one-liner lol */
-.field-big {
+.work:nth-child(even) {
+    margin-right: 40px;
+}
+
+.work img {
     width: 100%;
+    border: 0 none;
+    opacity: 0.8;
+}
+
+.work h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #4aaaa5;
+    border-bottom: 0;
+}
+
+#contact-form ul {
+    margin-bottom: 20px;
+  }
+  
+  #contact-form li {
+    margin-bottom: 10px;
+  }
+  
+  label,
+  input[type=text],
+  input[type=email],
+  textarea {
+    display: block;
+    width: 100%;
+  }
+  
+  input[type=text],
+  input[type=email],
+  textarea {
+    height: 35px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+  }
+  
+  textarea {
     height: 200px;
-}
-
-.submit-button {
-    background-color: #4aaaa5;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 32px;
-    padding: 0px 20px;
-    border: none;
-    margin: 10px 0px;
-}
+  }
+  
+  input[type=submit] {
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    background: #4aaaa5;
+    border: 0 none;
+  }
+  
