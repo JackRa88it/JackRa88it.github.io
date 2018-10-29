@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
 }
 
-.container {
+.container-custom {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
@@ -106,7 +106,7 @@ h3 {
     border-bottom: 2px solid #eee;
 }
 
-.main-container {
+.main-container-custom {
     padding-top: 130px;
     min-height: calc(100vh - 70px);
 }
@@ -179,37 +179,53 @@ footer {
     margin-bottom: 20px;
   }
   
-  #contact-form li {
+#contact-form li {
     margin-bottom: 10px;
-  }
-  
-  label,
-  input[type=text],
-  input[type=email],
-  textarea {
+}
+
+label,
+input[type=text],
+input[type=email],
+textarea {
     display: block;
     width: 100%;
-  }
-  
-  input[type=text],
-  input[type=email],
-  textarea {
+}
+
+input[type=text],
+input[type=email],
+textarea {
     height: 35px;
     padding: 0 10px;
     font-size: 14px;
     border: 1px solid #ddd;
-  }
-  
-  textarea {
+}
+
+textarea {
     height: 200px;
-  }
-  
-  input[type=submit] {
+}
+
+input[type=submit] {
     padding: 10px 30px;
     font-size: 18px;
     color: #fff;
     cursor: pointer;
     background: #4aaaa5;
     border: 0 none;
-  }
+}
+
+.modal-body {
+    height: 80px;
+    padding-top: 23px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+#modalCloseButton {
+    background: #4aaaa5;
+    color: #fff;
+    border: 0 none;
+}
   
