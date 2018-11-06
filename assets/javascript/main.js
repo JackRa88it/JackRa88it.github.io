@@ -9,6 +9,7 @@ var config = {
 };
 firebase.initializeApp(config);
 
+// contact form
 function pushToFirebase(messageObj) {
 
   firebase.database().ref('contact-messages').push().set(messageObj)
@@ -23,7 +24,7 @@ function pushToFirebase(messageObj) {
       });
 }
 
-$("#contact-form").on('submit', function(event) {
+$("#form").on('submit', function(event) {
   event.preventDefault();
   let messageObj = {};
   messageObj.name = $('#name').val();
@@ -34,3 +35,30 @@ $("#contact-form").on('submit', function(event) {
   $('#message').val("sending message...");
   pushToFirebase(messageObj);
 })
+
+// custom nav highlighting on scroll
+$(document).ready(function () {
+  $(document).on("scroll", onScroll);
+  
+  $('a[href^="#"]').on('click', function (e) {
+      $('a').each(function () {
+          $(this).removeClass('active');
+      })
+      $(this).addClass('active');
+  });
+});
+
+function onScroll(event){
+  var scrollPos = $(document).scrollTop();
+  $('#nav-links a').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+          $('#nav-links ul li a').removeClass("active");
+          currLink.addClass("active");
+      }
+      else{
+          currLink.removeClass("active");
+      }
+  });
+}
